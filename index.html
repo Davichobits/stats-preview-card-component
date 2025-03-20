@@ -10,20 +10,37 @@
   <main>
     <div>
       <!-- seccion uno -->
-      <div>
-      <img src="./assets/images/image-header-mobile.jpg" alt="">
-      </div>
+      <picture>
+        <source media="(max-width:640px)" srcset="./assets/images/image-header-mobile.jpg">
+        <source media="(min-width:641px)" srcset="./assets/images/image-header-desktop.jpg">
+        <img src="./assets/images/image-header-mobile.jpg" alt="">
+      </picture>
 
       <!-- sección dos -->
       <div>
-        Get insights that help your business grow.
 
-        Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-        experience, and overall efficiency.
+        <h2>Get insights that help your business grow.</h2>
+        
+        <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
 
-        10k+ companies
-        314 templates
-        12m+ queries
+        <div>
+
+          <div>
+            <p>10k+</p>
+            <p>companies</p>
+          </div>
+
+          <div>
+            <p>314+</p>
+            <p>templates</p>
+          </div>
+
+          <div>
+            <p>12m+</p>
+            <p>queries</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </main>
