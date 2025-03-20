@@ -9,23 +9,23 @@
 </head>
 <body class="text-White h-screen grid place-content-center font-Inter bg-Very-dark-blue">
   <main>
-    <div class="w-[327px] bg-Dark-desaturated-blue rounded-lg overflow-hidden">
+    <div class="w-[327px] bg-Dark-desaturated-blue rounded-lg overflow-hidden xl:flex xl:flex-row-reverse xl:w-[1100px]">
       <!-- seccion uno -->
-      <picture class="relative">
-        <source media="(max-width:640px)" srcset="./assets/images/image-header-mobile.jpg">
-        <source media="(min-width:641px)" srcset="./assets/images/image-header-desktop.jpg">
+      <picture class="relative flex-1">
+        <source media="(max-width:1280px)" srcset="./assets/images/image-header-mobile.jpg">
+        <source media="(min-width:1281px)" srcset="./assets/images/image-header-desktop.jpg">
         <img src="./assets/images/image-header-mobile.jpg" alt="">
         <div class="bg-Image-bg/65 w-full h-full absolute top-0"></div>
       </picture>
 
       <!-- sección dos -->
-      <div class="pt-10 px-8 pb-8">
+      <div class="pt-10 px-8 pb-8 flex-1">
 
-        <h2 class="font-bold text-center text-[1.75em] mb-4">Get <span class="text-Soft-violet-accent">insights</span> that help your business grow.</h2>
+        <h2 class="font-bold text-center text-[1.75em] mb-4 xl:text-left xl:text-4xl xl:w-[400px] xl:mb-6">Get <span class="text-Soft-violet-accent">insights</span> that help your business grow.</h2>
         
-        <p class="text-center text-[0.9375em] text-Slightly-transparent-white mb-10">Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
+        <p class="text-center text-[0.9375em] text-Slightly-transparent-white mb-10 xl:text-left xl:w-[375px] xl:mb-14">Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
 
-        <div class="text-center sm:flex">
+        <div class="text-center xl:flex xl:justify-between xl:w-[350px] xl:text-left">
 
           <div class="mb-6">
             <p class="font-bold text-2xl">10k+</p>
