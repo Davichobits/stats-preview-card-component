@@ -6,6 +6,12 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --spacing: 0.25rem;
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --font-weight-bold: 700;
+    --tracking-wider: 0.05em;
+    --radius-lg: 0.5rem;
     --default-font-family: var(--font-sans);
     --default-font-feature-settings: var(--font-sans--font-feature-settings);
     --default-font-variation-settings: var(
@@ -18,6 +24,14 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
+    --color-Very-dark-blue: hsl(233, 47%, 7%);
+    --color-Dark-desaturated-blue: hsl(244, 38%, 16%);
+    --color-Image-bg: hsla(277, 90%, 23%);
+    --color-Soft-violet-accent: hsl(277, 64%, 61%);
+    --color-White: hsl(0, 0%, 100%);
+    --color-Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+    --font-Inter: Inter;
+    --font-Lexend-Deca: Lexend_Deca;
   }
 }
 @layer base {
@@ -162,19 +176,148 @@
   }
 }
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
+  .relative {
+    position: relative;
+  }
   .static {
     position: static;
+  }
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
+  }
+  .mb-10 {
+    margin-bottom: calc(var(--spacing) * 10);
   }
   .contents {
     display: contents;
   }
+  .grid {
+    display: grid;
+  }
   .table {
     display: table;
+  }
+  .h-full {
+    height: 100%;
+  }
+  .h-screen {
+    height: 100vh;
+  }
+  .w-\[327px\] {
+    width: 327px;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .place-content-center {
+    place-content: center;
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
+  .bg-Dark-desaturated-blue {
+    background-color: var(--color-Dark-desaturated-blue);
+  }
+  .bg-Image-bg\/65 {
+    background-color: color-mix(in oklab, var(--color-Image-bg) 65%, transparent);
+  }
+  .bg-Very-dark-blue {
+    background-color: var(--color-Very-dark-blue);
+  }
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
+  }
+  .pt-10 {
+    padding-top: calc(var(--spacing) * 10);
+  }
+  .pb-8 {
+    padding-bottom: calc(var(--spacing) * 8);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .font-Inter {
+    font-family: var(--font-Inter);
+  }
+  .font-Lexend-Deca {
+    font-family: var(--font-Lexend-Deca);
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-\[0\.75em\] {
+    font-size: 0.75em;
+  }
+  .text-\[0\.9375em\] {
+    font-size: 0.9375em;
+  }
+  .text-\[1\.75em\] {
+    font-size: 1.75em;
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .tracking-wider {
+    --tw-tracking: var(--tracking-wider);
+    letter-spacing: var(--tracking-wider);
+  }
+  .text-Slightly-transparent-white {
+    color: var(--color-Slightly-transparent-white);
+  }
+  .text-Soft-violet-accent {
+    color: var(--color-Soft-violet-accent);
+  }
+  .text-White {
+    color: var(--color-White);
+  }
+  .uppercase {
+    text-transform: uppercase;
   }
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+  .sm\:flex {
+    @media (width >= 40rem) {
+      display: flex;
+    }
+  }
+}
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("../assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf") format("woff2");
+}
+@font-face {
+  font-family: Lexend_Deca;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/Lexend_Deca/LexendDeca-VariableFont_wght.ttf") format("woff2");
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
 }
 @property --tw-outline-style {
   syntax: "*";
